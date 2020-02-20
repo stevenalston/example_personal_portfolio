@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta author="Steven Alston">
+    <!-- meta data for search engines -->
+    <meta keywords="portfolio, web development" />
+    <meta description="A personal website" />
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Raleway|Roboto|Rock+Salt" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <title>Contact Me</title>
+  </head>
+  <body>
+  <!-- ======================================
+                    Navigation
+  ======================================= -->
+  <nav>
+    <div class="container">
+      <section class="row">
+        <h2 class="name"><a href="#">Steve<span>Alston</span></a></h2>
+        <ul class="menu">
+          <li class="menu-item item1"><a href="#">Life</a></li>
+          <li class="menu-item item2"><a href="#">Work</a></li>
+          <li class="menu-item item3"><a href="#">Ambitions</a></li>
+          <li class="menu-item item3"><a href="contact.html">Contact</a></li>
+        </ul>
+      </section>
+    </div>
+  </nav>
+  <!-- ======================================
+                    Contact Form
+  ======================================= -->
+  <div class="container contact">
+    <div class="contact-details">
+      <h1>My Contact Details</h1>
+      <p>2040 South Park Street</p>
+      <p>Madison, WI  53713</p>
+      <p><a href="tel:6082571436">Call Me</a></p>
+    </div>
+    <hr>
+    <form class="contact-form" action="mailto:info@eliteclientele.com" method="post" enctype="text/plain">
+      <label for="name">Full Name: </label>
+      <input type="text" name="name" required><br>
+      <label for="email">Your Email: </label>
+      <input type="email" required name="email" placeholder="name@gmail.com"><br>
+      <label for="message">Your Message:</label>
+      <textarea required name="message" rows="8" cols="80"></textarea>
+      <br>
+      <input type="submit" id="submit-contact-form">
+    </form>
+  </div>
+  </body>
+</html>

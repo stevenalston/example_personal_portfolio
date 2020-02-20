@@ -1,0 +1,336 @@
+/* General Styles */
+body {
+	background: hsl(253, 73%, 5%);
+	color: #fff9cc;
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+}
+
+.container {
+	width: 85%;
+	margin: 0 auto;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+/* Home Page Styles */
+.stage {
+	animation: sky-colors 14s linear;
+	height: 700px;
+	position: relative;
+	overflow: hidden;
+}
+
+.graphics-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 4rem;
+}
+
+.anchor-point {
+	/* background: pink; */
+	position: relative;
+	top: 500px;
+	left: 175px;
+	width: 10px;
+	height: 10px;
+}
+
+.moon-anchor {
+	position: relative;
+	top: 50px;
+	left: -30vw;
+	width: 10px;
+	height: 10px;
+}
+.moon {
+	animation: moon-glow 5s ease 10s forwards;
+	opacity: 0;
+	border-radius: 50%;
+	height: 100px;
+	width: 100px;
+	position: absolute;
+	top: -150px;
+	left: 35px;
+	box-shadow: 20px 20px 10px 3px #d4ebfa;
+}
+
+.land-bg {
+	position: absolute;
+	bottom: 0;
+	z-index: 10;
+}
+
+.sun {
+	animation: sunOrbit 29s linear 250ms;
+	background: #fcf79c; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover, #fcf79c 0%, #fcde00 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover, #fcf79c 0%, #fcde00 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(
+		ellipse at center,
+		#fcf79c 0%,
+		#fcde00 100%
+	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(
+			startColorstr='#fcf79c',
+			endColorstr='#fcde00',
+			GradientType=1
+		); /* IE6-9 fallback on horizontal gradient */
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	box-shadow: 0 0 50px 10px #fff9cc, 0 0 50px hsl(53, 100%, 90%);
+	position: absolute;
+	z-index: 2;
+	overflow: hidden;
+}
+
+.info-container {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	text-align: center;
+}
+
+.name a {
+	font: 100 1.25em 'Raleway';
+	letter-spacing: 2px;
+	color: #fff9cc;
+}
+
+.main-heading {
+	animation: colorChange 17s linear forwards;
+	position: relative;
+	font: 100 4em 'Raleway';
+	letter-spacing: 3px;
+	margin-bottom: 0;
+	color: #fff9cc;
+	z-index: 12;
+}
+
+.main-heading span,
+.name span {
+	color: #fcde00;
+	letter-spacing: 1px;
+	font-weight: 800;
+}
+
+.sub-heading {
+	animation: colorChange2 17s linear forwards;
+	font: 600 1.5rem Roboto;
+	text-transform: uppercase;
+	margin-top: 0;
+	color: #fcde00;
+}
+
+.clouds-anchor {
+	position: relative;
+	left: -75vw;
+	width: 500px;
+}
+
+.cloud {
+	opacity: 0.8;
+	position: absolute;
+	z-index: 3;
+}
+
+.cloud1 {
+	animation: cloudMovement 20s ease-in-out forwards;
+	width: 70%;
+	left: 300px;
+}
+.cloud2 {
+	animation: cloudMovement2 20s ease-in-out forwards;
+	width: 55%;
+	left: -450px;
+	top: 60px;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav {
+	background: #1daabb;
+	border-bottom: #fcde00 1px solid;
+}
+
+.menu {
+	text-align: right;
+	margin: 0;
+	padding: 15px 0;
+}
+.menu-item {
+	display: inline-block;
+}
+
+.menu-item a {
+	color: #fff9cc;
+	display: block;
+	font: 1.2rem Lato;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+
+@keyframes sky-colors {
+	0% {
+		background: #ecbbcc;
+	}
+
+	10% {
+		background: #f6fad4;
+	}
+
+	30% {
+		background: #37b4f2;
+	}
+
+	50% {
+		background: #37b4f2;
+	}
+
+	70% {
+		background: #37b4f2;
+	}
+
+	85% {
+		background: #f6fad4;
+	}
+
+	100% {
+		background: hsl(253, 73%, 5%);
+	}
+}
+
+@keyframes cloudMovement {
+	from {
+		transform: translateX(0) scale(0.7);
+		opacity: 1;
+	}
+
+	to {
+		transform: translate(175vw, 20px) scale(0.4);
+		opacity: 0.2;
+	}
+}
+
+@keyframes cloudMovement2 {
+	from {
+		transform: translateX(0) scale(1);
+		opacity: 1;
+	}
+
+	to {
+		transform: translate(175vw, 20px) scale(0.3);
+		opacity: 0;
+	}
+}
+
+@keyframes sunOrbit {
+	from {
+		transform: rotate(-160deg) translateX(45vw) rotate(-160deg);
+	}
+	to {
+		transform: rotate(180deg) translateX(45vw) rotate(-180deg);
+	}
+}
+
+@keyframes colorChange {
+	0% {
+		color: #070316;
+	}
+
+	70% {
+		color: #070316;
+	}
+
+	100% {
+		color: #d4ebfa;
+	}
+}
+
+@keyframes colorChange2 {
+	0% {
+		color: #06242a;
+	}
+
+	70% {
+		color: #06242a;
+	}
+
+	100% {
+		color: #37b4f2;
+	}
+}
+
+@keyframes moon-glow {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+/* Contact Page Styles*/
+.contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font: 100 1.75em 'Raleway';
+}
+.contact-details {
+	line-height: 1em;
+	text-align: center;
+}
+.contact-details h1 {
+	margin: 50px 0;
+}
+.contact-details p a {
+	color: #fff9cc;
+}
+.contact-form {
+	background: #fcde00;
+	border-radius:8px;
+	box-shadow:0 0 40px -10px hsl(253, 73%, 5%);;
+	color: hsl(253, 73%, 5%);
+	font: 400 1.5rem Roboto;
+	margin-bottom: 40px;
+	padding: 20px;
+}
+.contact-form label {
+	padding: 5px;
+}
+.contact-form label, .contact-form input, .contact-form textarea {
+	display: block;
+	margin: 0 auto;
+}
+.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
+	border:0;
+	outline:none;
+	padding:10px;
+	width:95%;
+}
+.contact-form input::placeholder {
+	font: 100 1rem Roboto;
+}
+#submit-contact-form {
+	background: #fff9cc;
+	border: none;
+	border-radius: 4px;
+	display: block;
+	font: 400 1.5rem Roboto;
+	margin: 10px auto;
+	padding: 5px 10px;
+}
+#submit-contact-form:hover {
+	background: hsl(253, 73%, 5%);
+	color: white;
+}
